@@ -1,0 +1,127 @@
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: hsla(210, 46%, 95%, 0.5);
+  background: #edf2f8;
+}
+
+.container {
+  width: 90%;
+  margin: 10% auto 10% auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  background: #333;
+  color: #fff;
+  padding: 20px 20px 30px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  height: fit-content;
+}
+
+.profil {
+  display: flex;
+  width: 160px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  align-self: center;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.identity .status,
+.content {
+  color: hsla(210, 46%, 95%, 0.5);
+}
+
+.name {
+  font-weight: 500;
+}
+.empahse {
+  font-weight: 600;
+  font-size: 1.22rem;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin: 20px 0 0 0;
+}
+
+.one {
+  background: url(images/bg-pattern-quotation.svg) top right 20px no-repeat
+    hsl(263, 55%, 52%);
+}
+
+.two {
+  background: hsl(217, 19%, 35%);
+}
+
+.three {
+  order: 2;
+  margin-bottom: 0;
+}
+
+.five {
+  background: hsl(219, 29%, 14%);
+  order: 1;
+}
+
+.three,
+.four {
+  background: #ffffff;
+}
+
+.three .profil .identity .name,
+.four .profil .identity .name {
+  color: #4c5058;
+}
+
+.three .profil .identity .status,
+.four .profil .identity .status {
+  color: #b9bbc0;
+}
+
+.three .empahse,
+.four .empahse {
+  color: #545a60;
+}
+
+.three .content,
+.four .content {
+  color: #797c82;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 285px);
+    grid-gap: 20px;
+  }
+  .post {
+    margin-bottom: 0;
+    height: auto;
+  }
+  .one {
+    grid-column: span 2;
+  }
+
+  .five {
+    grid-column: span 2;
+  }
+
+  .three {
+    grid-row: span 2;
+  }
+
+  .three,
+  .five {
+    order: 0;
+  }
+}
